@@ -223,7 +223,7 @@ yesBtn.addEventListener("click", () => {
 ------------------------------------------------- */
 function sendEmailYes() {
   const data = {
-    access_key: "YOUR_ACCESS_KEY_HERE", // 🔥 put your Web3Forms access key
+    access_key: "412d055a-99e6-4a18-b731-7f9188a6bf93", // 🔥 put your Web3Forms access key
     subject: "Someone said YES! ❤️",
     message: "She clicked YES on your love page! 💖",
   };
