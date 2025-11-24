@@ -223,14 +223,18 @@ yesBtn.addEventListener("click", () => {
 ------------------------------------------------- */
 function sendEmailYes() {
   const data = {
-    access_key: "412d055a-99e6-4a18-b731-7f9188a6bf93", // 🔥 put your Web3Forms access key
-    subject: "Someone said YES! ❤️",
+    access_key: "412d055a-99e6-4a18-b731-7f9188a6bf93",
+    from_name: "Love Website",
+    subject: "She clicked YES! ❤️",
     message: "She clicked YES on your love page! 💖",
   };
 
   fetch("https://api.web3forms.com/submit", {
     method: "POST",
-    headers: { "Content-Type": "application/json", Accept: "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
     body: JSON.stringify(data),
   })
     .then((res) => res.json())
