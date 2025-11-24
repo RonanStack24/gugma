@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>A Very Important Question</title>
+
+    <!-- Tailwind (optional, used for convenience) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.0/dist/confetti.browser.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Floating hearts canvas (background) -->
+    <canvas id="heart-canvas"></canvas>
+
+    <!-- Start screen (to allow audio play on user gesture) -->
+    <div id="start-screen" class="start-screen">
+      <h2 class="start-title">Tap to Begin</h2>
+      <p class="start-sub">Music will play 💖</p>
+    </div>
+
+    <!-- Main white card -->
+    <main id="main-container" class="main-card">
+      <h1 id="question-text" class="question-text"></h1>
+
+      <!-- Buttons -->
+      <div id="button-group" class="button-group">
+        <button id="yes-btn" class="btn yes">Yes, of course! ❤️</button>
+        <button id="no-btn" class="btn no">No</button>
+        <!-- sparkles container for YES -->
+        <div id="sparkles" class="sparkles" aria-hidden="true"></div>
+      </div>
+
+      <!-- result area (hidden until YES) -->
+      <div id="result-content" class="result-content hidden">
+        <p class="result-text">You made my day! I love you! ❤️</p>
+        <img
+          id="result-gif"
+          class="result-gif"
+          src="kiss.gif"
+          alt="celebrate"
+        />
+      </div>
+    </main>
+
+    <!-- Reaction GIFs (romantic couple aesthetic) -->
+    <img id="cry-gif" class="reaction-gif" src="cry.gif" alt="cry" />
+    <img id="shock-gif" class="reaction-gif" src="shock.gif" alt="shock" />
+    <img id="run-gif" class="reaction-gif" src="run.gif" alt="run" />
+
+    <!-- emoji float container (for additional emoji particles) -->
+    <div id="emoji-layer" class="emoji-layer" aria-hidden="true"></div>
+
+    <!-- Audio assets (replace placeholders with your files) -->
+    <audio id="background-music" loop preload="auto">
+      <source src="Somethin' Stupid (2008 Remastered).mp3" type="audio/mp3" />
+    </audio>
+
+    <audio id="pop-sfx" preload="auto">
+      <source src="softpop.mp3" type="audio/mp3" />
+    </audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
