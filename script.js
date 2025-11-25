@@ -21,7 +21,7 @@ const heartCanvas = document.getElementById("heart-canvas");
 const emojiLayer = document.getElementById("emoji-layer");
 const sparklesContainer = document.getElementById("sparkles");
 
-const popSfx = document.getElementById("pop-sfx");
+const popSfx = document.getElementById("softpop-sfx");
 
 let fadeLevel = 1;
 
